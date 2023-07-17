@@ -37,7 +37,7 @@ require_once "./Film.php";
 $avatar= new Film('Avatar', 'James Cameron', 2009);
 $joker= new Film('Joker', 'Todd Phillips', 2019);
 
-git $avatar->setMovie('Titanic', 2001);
+$avatar->setMovie('Titanic', 2001);
 espace();
 echo $avatar->movie();
 espace();

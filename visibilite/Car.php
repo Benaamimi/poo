@@ -35,7 +35,7 @@ class Car
 
     
     // cette fonction permet de modifier la valeur de la propriete
-    public function setModel($model): void //ne retourne rien void
+    public function setModel(string $model): void //ne retourne rien 'void'
     {
         $this->model = $model;
     }
@@ -46,7 +46,7 @@ class Car
         return $this->color;
     }
 
-    public function setColor($color): self 
+    public function setColor(string $color): self 
     {
         $this->color = $color;
         return $this;
@@ -54,9 +54,10 @@ class Car
 
     // DATE
   
-    public function setDate($date): void 
+    public function setDate( int $date): self
     {
         $this->date = $date;
+        return $this;
     }
    
 }

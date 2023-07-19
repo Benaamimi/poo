@@ -13,8 +13,13 @@ function espace(){
 }
 
 
+
+
+
+
+
 espace();
-echo '<br>';
+espace();
 echo "---------------------------exercices:------------------------------------";
 
 require_once './Book.php';
@@ -22,14 +27,28 @@ require_once './Book.php';
 $alice = new Book('Alice au pays des merveilles', 'Lewis Carroll', 124, 1865);
 $harry = new Book('Harry Potter à l\'école des sorciers', 'J . K Roling', 320, 1997);
 
-echo '<br>';
+$alice->setLivre("l'Alchimiste", "Paolo Coelio");
+espace();
+echo $alice->getLivre();
+espace();
 echo $alice->read();
-echo '<br>';
+espace();
 echo $harry->read();
+espace();
+echo $harry->getLivre();
 
-echo '<br>';
-echo '<br>';
-echo "---------------------------test:------------------------------------";
+echo '<pre>';
+var_dump($harry);
+echo '</pre>';
+
+
+
+
+
+
+espace();
+espace();
+echo "---------------------------exercice 2:------------------------------------";
 
 
 require_once "./Film.php";
@@ -37,7 +56,7 @@ require_once "./Film.php";
 $avatar= new Film('Avatar', 'James Cameron', 2009);
 $joker= new Film('Joker', 'Todd Phillips', 2019);
 
-$avatar->setMovie('Titanic', 2001);
+// $avatar->setMovie('Titanic', 2001);
 espace();
 echo $avatar->movie();
 espace();

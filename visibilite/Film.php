@@ -9,7 +9,7 @@ class Film
 
     public function movie()
     {
-        return "Le film $this->title est réaliser par $this->director en $this->year.";
+        return "Le film $this->title est réalisé par $this->director en $this->year.";
     }
 
     public function __construct($title, $director, $year)

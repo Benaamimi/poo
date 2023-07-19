@@ -1,4 +1,7 @@
 <?php
+/**
+ * [Description Book]
+ */
 class Book
 {
     private string $title;
@@ -6,6 +9,7 @@ class Book
     public int $pages;
     public int $year;
 
+    // '__construct' est une méthode magique
     public function __construct($title, $author, $pages, $year)
     {
         $this->title = $title;
@@ -14,33 +18,34 @@ class Book
         $this->year = $year;
     }
 
+    /**
+     * [Description for read]
+     *
+     * @return [type]
+     * 
+     */
     public function read()
     {
         return "je lis $this->title écrit par $this->author.";
     }
 
-    // TITLE GETTER SETTER
-    public function getTitle(): string
+    public function getLivre(): string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): self
+    /**
+     * [comme un mini constructor pour rapeller les modidif]
+     *
+     * @param string $author
+     * 
+     * @return self
+     * 
+     */
+    public function setLivre($title, $author)
     {
         $this->title = $title;
-        return $this;
-    }
-
-    // AUTHOR GETTER SETTER
-    public function getAuthor(): string
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(string $author): self
-    {
-        $this->author = $author;
-        return $this;
+        $this->author = $author;  
     }
  
 }

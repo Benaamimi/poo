@@ -2,7 +2,7 @@
 
 class Aliment extends Article
 {
-    private string $datePeremption;
+    protected string $datePeremption;
 
     public function __construct(string $name, float $price, string $datePeremption)
     {

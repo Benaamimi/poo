@@ -1,14 +1,21 @@
 <?php
 
+namespace App\interface;
+
 class Bird extends Animal
 {
     protected bool $migrate; 
+   
 
     public function getEat(){}
 
-    public function __construct($migrate)
+    public function __construct(string $name, bool $migrate)
     {
-        $this->migrate = $migrate;
+        
+        $this->name = $name;
+        $this->migrate = $migrate; 
+       
+       
     }
 
 
@@ -34,4 +41,5 @@ class Bird extends Animal
 
         return $this;
     }
+
 }

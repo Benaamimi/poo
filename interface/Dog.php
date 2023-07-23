@@ -1,18 +1,36 @@
 <?php
+namespace App\interface;
+
+require_once "./SavageAnimal.php";
 
 
-class Dog extends Animal
+class Dog extends Animal implements SavageAnimal
 {
-    protected string $pedigree;
-
+    
+    public function devore()
+    {
+        
+        return "je vien de devorer un animal ";
+    }
+    
+    
+    
     public function getEat(){}
-
+    
+    protected string $pedigree;
+    
     public function __construct(string $name, int $age, string $pedigree, array $listAliment)
     {
         $this->name = $name;
         $this->age = $age;
         $this->pedigree = $pedigree;
         $this->listAliment = $listAliment;
+    }
+
+    public function eatSomeThing(Bird $oiseau)
+    {
+        return $this->name ." a devoré ".$oiseau->getName();
+        
     }
     
     public function description()
